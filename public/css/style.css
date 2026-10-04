@@ -1,0 +1,391 @@
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+:root {
+    --primary: rgb(10, 61, 97);
+    --secondary: #003f88;
+    --bg: #f4f6fb;
+    --white: #ffffff;
+    --text: #222222;
+    --border: #e5e5e5;
+    --hover: #e6f0ff;
+
+    --shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+
+/* =========================================================
+   HTML / BODY
+========================================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+
+    /* Pashto / Dari / Arabic */
+    direction: rtl;
+
+    /* Because header is fixed */
+    padding-top: 90px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    width: 100%;
+    min-height: 70px;
+
+    z-index: 9999;
+
+    background: linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    backdrop-filter: blur(10px);
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+/* =========================================================
+   HEADER INNER
+========================================================= */
+
+.head {
+    background: linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    border: 1px solid rgba(171, 164, 164, 0.4);
+
+    text-align: center;
+
+    padding: 1.5rem 2rem;
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+main {
+    width: 100%;
+    padding: 2rem;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.containerss {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.cardss {
+    width: 100%;
+    max-width: 1200px;
+
+    background: var(--white);
+
+    border-radius: 15px;
+
+    box-shadow: var(--shadow);
+
+    padding: 1rem;
+
+    overflow-x: auto;
+}
+
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    text-align: center;
+
+    background: var(--white);
+}
+
+
+/* =========================================================
+   TABLE HEADER
+========================================================= */
+
+thead {
+    background: var(--primary);
+
+    color: var(--white);
+}
+
+
+/* =========================================================
+   TABLE CELLS
+========================================================= */
+
+th,
+td {
+    padding: 12px;
+
+    border: 1px solid var(--border);
+
+    vertical-align: middle;
+}
+
+
+/* =========================================================
+   TABLE HEADER CELLS
+========================================================= */
+
+th {
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   TABLE BODY
+========================================================= */
+
+tbody tr {
+    border-bottom: 1px solid var(--border);
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* =========================================================
+   TABLE HOVER
+========================================================= */
+
+tbody tr:hover {
+    background: var(--hover);
+
+    transform: scale(1.01);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer {
+    width: 100%;
+
+    background: linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    color: var(--white);
+
+    padding: 50px 2%;
+
+    margin-top: 40px;
+}
+
+
+/* =========================================================
+   FOOTER GRID
+========================================================= */
+
+.footer-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(200px, 1fr));
+
+    gap: 25px;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   FOOTER LINKS
+========================================================= */
+
+.footer a {
+    color: var(--white);
+
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+.footer a:hover {
+    color: #d9eaff;
+}
+
+
+/* =========================================================
+   LINKS
+========================================================= */
+
+a {
+    transition: 0.3s ease;
+}
+
+
+/* =========================================================
+   IMAGES
+========================================================= */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+========================================================= */
+
+@media (max-width: 992px) {
+
+    body {
+        padding-top: 80px;
+    }
+
+    main {
+        padding: 1.5rem;
+    }
+
+    .containerss {
+        padding: 10px;
+    }
+
+    .cardss {
+        padding: 0.8rem;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    body {
+        padding-top: 80px;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    .head {
+        padding: 1rem;
+    }
+
+    .containerss {
+        padding: 5px;
+    }
+
+    .cardss {
+        padding: 0.5rem;
+
+        border-radius: 10px;
+    }
+
+    th,
+    td {
+        font-size: 0.85rem;
+
+        padding: 8px;
+    }
+
+    .footer {
+        padding: 35px 5%;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE - SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    main {
+        padding: 0.7rem;
+    }
+
+    .cardss {
+        padding: 0.3rem;
+    }
+
+    th,
+    td {
+        font-size: 0.75rem;
+
+        padding: 6px;
+    }
+
+}
