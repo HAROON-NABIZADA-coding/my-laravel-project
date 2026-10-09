@@ -15,13 +15,12 @@ public function create()
 {
     return view('provinces.create');
 }
-
-public function show(string $provinces)
+public function show(string $province)
 {
-    return view('deserts.show');
+    return view('provinces.show');
 }
 
-public function edit(string $provinces)
+public function edit(string $province)
 {
     return view('provinces.edit');
 }

@@ -16,12 +16,12 @@ public function create()
     return view('neighbors.create');
 }
 
-public function show(string $neighbors)
+public function show(string $neighbor)
 {
-    return view('deserts.show');
+    return view('neighbors.show');
 }
 
-public function edit(string $neighbors)
+public function edit(string $neighbor)
 {
     return view('neighbors.edit');
 }

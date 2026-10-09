@@ -16,12 +16,12 @@ public function create()
     return view('rivers.create');
 }
 
-public function show(string $rivers)
+public function show(string $river)
 {
-    return view('deserts.show');
+    return view('rivers.show');
 }
 
-public function edit(string $rivers)
+public function edit(string $river)
 {
     return view('rivers.edit');
 }

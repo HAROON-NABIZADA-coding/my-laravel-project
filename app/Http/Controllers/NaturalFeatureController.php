@@ -16,12 +16,12 @@ public function create()
     return view('naturalfeatures.create');
 }
 
-public function show(string $naturalfeatures)
+public function show(string $natural_feature)
 {
-    return view('deserts.show');
+    return view('naturalfeatures.show');
 }
 
-public function edit(string $naturalfeatures)
+public function edit(string $natural_feature)
 {
     return view('naturalfeatures.edit');
 }
